@@ -27,20 +27,13 @@ Integrating Maven with Jenkins allows you to automate the build and testing proc
    - **Manual installation:** Provide a name and specify the Maven installation path if you have Maven installed on the machine.
 5. Click `Save` to store the configuration.
 
+![Screenshot (211)](https://github.com/user-attachments/assets/2a749685-4503-4588-82f8-02f622684beb)
+
 ### **Step 4: Create a Maven Job in Jenkins**
 1. Go to Jenkins Dashboard.
 2. Click on `New Item`.
 3. Enter a name for your job (e.g., `My-Maven-Project`).
 4. Select `Maven Project` and click `OK`.
-
-### **Step 5: Configure the Maven Job**
-1. In the job configuration page, scroll down to the `Source Code Management` section.
-   - Select `Git`, `Subversion`, or any other relevant source code management system.
-   - Enter the repository URL and any required credentials.
-
-2. In the `Build` section, configure the Maven goals.
-   - For a standard Maven build, enter `clean install` in the `Goals and options` field.
-   - If you want to skip tests, use `clean install -DskipTests`.
 
 ### **Example: Jenkins Pipeline with Maven (Declarative Pipeline)**
 If you prefer to use a Jenkins Pipeline (Jenkinsfile), here’s an example:
@@ -68,3 +61,4 @@ pipeline {
     }
 }
 ```
+![Screenshot (212)](https://github.com/user-attachments/assets/a3c7989a-5ba0-4f2a-b7b0-a7b3bb7ada5b)
