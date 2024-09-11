@@ -14,6 +14,10 @@ Integrating Maven with Jenkins allows you to automate the build and testing proc
 3. Go to the `Available` tab and search for `Maven Integration Plugin`.
 4. Install the `Maven Integration Plugin`.
 
+![image](https://github.com/user-attachments/assets/d943dd3d-8b81-4c6e-997c-de24d2cb2972)
+![image](https://github.com/user-attachments/assets/79d59b42-6c4d-4045-9efa-a408718182c9)
+![image](https://github.com/user-attachments/assets/c906ea38-9f7c-4948-b3c3-aeca3bb15af7)
+
 ### **Step 3: Configure Maven in Jenkins**
 1. Go to Jenkins Dashboard.
 2. Click on `Manage Jenkins` > `Global Tool Configuration`.
@@ -38,20 +42,6 @@ Integrating Maven with Jenkins allows you to automate the build and testing proc
    - For a standard Maven build, enter `clean install` in the `Goals and options` field.
    - If you want to skip tests, use `clean install -DskipTests`.
 
-3. **Optional: Post-build actions**
-   - You can configure post-build actions like archiving the artifacts, sending notifications, deploying to a server, or triggering other jobs.
-
-4. Click `Save` to store your job configuration.
-
-### **Step 6: Run the Maven Job**
-1. Go back to your Jenkins job dashboard.
-2. Click `Build Now` to start the Maven build process.
-3. Jenkins will fetch the source code from your repository, run the Maven build, and display the results in the build logs.
-
-### **Step 7: View Build Results**
-1. After the build is complete, you can view the console output by clicking on the build number under `Build History`.
-2. Jenkins will show the output of the Maven build, including any compilation errors, test results, and final status.
-
 ### **Example: Jenkins Pipeline with Maven (Declarative Pipeline)**
 If you prefer to use a Jenkins Pipeline (Jenkinsfile), here’s an example:
 
@@ -75,32 +65,6 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
-
-        stage('Test') {
-            steps {
-                sh 'mvn test'
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                sh 'mvn deploy'
-            }
-        }
-    }
-
-    post {
-        always {
-            junit 'target/surefire-reports/*.xml' // Publish test results
-            archiveArtifacts artifacts: '**/target/*.jar', allowEmptyArchive: true
-        }
     }
 }
 ```
-
-### **Key Points to Remember:**
-- **Maven Goals:** Customize the Maven goals according to your project requirements (e.g., `clean install`, `clean package`, `deploy`, etc.).
-- **Jenkinsfile:** If you’re using a Jenkinsfile for pipeline jobs, ensure the `tools` section includes the correct Maven version name as configured in Jenkins.
-- **Build Triggers:** You can configure triggers like `Poll SCM` or `Build periodically` to automate the build process at regular intervals or when changes are detected in the source code repository.
-
-By following these steps, you’ll be able to integrate Maven with Jenkins and automate the build, test, and deployment processes for your Java projects.
