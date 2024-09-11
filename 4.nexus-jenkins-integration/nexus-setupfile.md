@@ -66,4 +66,5 @@ Use the URL from Step-6 to open Nexus in a browser.
 Log in using the username admin and the password retrieved in Step-7.
 This guide provides a clear path to setting up Docker and running a Nexus repository on an Ubuntu VM.
 
+![Screenshot (217)](https://github.com/user-attachments/assets/829be9a0-4012-4a62-90ca-3405b4fe9421)
 
