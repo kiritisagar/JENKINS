@@ -59,10 +59,10 @@ In the Build Environment section, check Prepare SonarQube Scanner environment.
 In the Build section, click Add build step and select Invoke SonarQube Scanner.
 
 # Configure the SonarQube Scanner:
+![Screenshot (215)](https://github.com/user-attachments/assets/4ee0c4d9-168d-45bb-8c72-05567a4cd8ae)
 
 ![Screenshot (216)](https://github.com/user-attachments/assets/987934c7-2023-4267-af39-66131862302f)
 
-![Screenshot (215)](https://github.com/user-attachments/assets/4ee0c4d9-168d-45bb-8c72-05567a4cd8ae)
 
 
 # Once the SonarQube stage executes, check the SonarQube dashboard (http://sonarip:9000) for the analysis report.
