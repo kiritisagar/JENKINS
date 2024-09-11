@@ -1,4 +1,29 @@
-Integrating Jenkins with Nexus Repository Manager allows you to automate the process of deploying your build artifacts (e.g., JAR, WAR files) to a Nexus repository. This is useful for managing and distributing your artifacts within your organization or for external clients. Here’s how to integrate Nexus with Jenkins:
+![image](https://github.com/user-attachments/assets/695b7222-ffaf-48f6-bbbd-3f8d6e331bf1)
+
+
+# install nexus plugin
+![image](https://github.com/user-attachments/assets/49d54d91-c897-4c6a-850a-60f2d51eb0fc)
+
+# Add Nexus Credentials in Manage Jenkins
+
+
+# in nexus server
+
+![Screenshot (218)](https://github.com/user-attachments/assets/97be6964-34a9-410d-8750-5699109471d3)
+
+# create repository. We will be using the repository to store our release artifacts.
+Create another repository for maven2 proxy.
+![image](https://github.com/user-attachments/assets/78709bac-8eeb-42a5-b44e-b1724f6ba773)
+
+
+
+
+
+# on jenkins
+
+install config file plugin
+![Screenshot (219)](https://github.com/user-attachments/assets/e420dcc6-dce4-4ed4-803f-4c42bece7958)
+
 
 ### **Step 1: Set Up Nexus Repository**
 1. **Install Nexus Repository Manager:**
